@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<pfsensepkgs>
+	<package>
+		<name>wireguard</name>
+		<pkginfolink>https://doc.pfsense.org/index.php/wireguard_package</pkginfolink>
+		<descr><![CDATA[WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.]]></descr>
+		<website>http://TBA/</website>
+		<version>0.1</version>
+		<configurationfile>wireguard.xml</configurationfile>
+	</package>
+</pfsensepkgs>
