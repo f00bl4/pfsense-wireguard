@@ -15,13 +15,13 @@ Further the pfSense plugin is in an early alpha state and should be used only fo
 
 To use wireguard on pfSense folloing pakages has to be installed manually:
 
-  [wireguard](http://pkg.freebsd.org/FreeBSD:11:amd64/latest/All/wireguard-0.0.20190406.txz)
+  [wireguard](http://pkg.freebsd.org/FreeBSD:11:amd64/latest/All/wireguard-0.0.20190913.txz)
 
-  [wireguard-go](http://pkg.freebsd.org/FreeBSD:11:amd64/latest/All/wireguard-go-0.0.20190409.txz)
+  [wireguard-go](http://pkg.freebsd.org/FreeBSD:11:amd64/latest/All/wireguard-go-0.0.20190908.txz)
 
 After copy both wireguard pakages and the plugin pakage to the pfSense you can install it as follows:
 ```	
-pkg install wireguard-0.0.20190406.txz wireguard-go-0.0.20190409.txz pfSense-pkg-wireguard-0.1.txz
+pkg install wireguard-0.0.20190913.txz wireguard-go-0.0.20190908.txz pfSense-pkg-wireguard-0.1.txz
 ```
 
 # Usage
