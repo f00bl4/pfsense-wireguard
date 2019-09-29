@@ -7,7 +7,7 @@
 "abi":"FreeBSD:11:amd64",
 "arch":"freebsd:11:x86:64",
 "prefix":"/usr/local",
-"flatsize":384816,
+"flatsize":44551,
 "licenselogic":"single",
 "licenses":["APACHE20"],
 "desc":"WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography",
