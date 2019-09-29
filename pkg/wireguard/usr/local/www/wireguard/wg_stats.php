@@ -2,9 +2,8 @@
 /*
  * wg_stats.php
  *
- * modified by f00bl4
- * 
- * part of pfSense (https://www.pfsense.org)
+ * Written and modified by f00bl4
+ *
  * Copyright (c) 2004-2018 Rubicon Communications, LLC (Netgate)
  * All rights reserved.
  *

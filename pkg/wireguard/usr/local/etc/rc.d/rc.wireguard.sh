@@ -36,7 +36,7 @@ $wg_config = $config['wireguard'];
 
 foreach($wg_config as $tmp_interface => $tmp_int_config) {
     if(empty($wg_config[$tmp_interface]['disable'])){
-        exec('ifconfig ' . escapeshellarg($tmp_interface . ' destroy'));
+        exec('ifconfig ' . escapeshellarg($tmp_interface ) . ' destroy');
         wg_start($tmp_interface);
     }
 

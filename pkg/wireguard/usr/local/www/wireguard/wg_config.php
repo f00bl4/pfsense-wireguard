@@ -2,12 +2,11 @@
 /*
  * wg_config.php
  * 
- * modified by f00bl4
- * 
- * part of pfSense (https://www.pfsense.org)
+ * Written and modified by f00bl4
+ *
  * Copyright (c) 2004-2018 Rubicon Communications, LLC (Netgate)
  * All rights reserved.
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at

@@ -2,12 +2,11 @@
 /*
  * wg_interface.php
  * 
- * modified by f00bl4
+ * Written and modified by f00bl4
  *
- * part of pfSense (https://www.pfsense.org)
  * Copyright (c) 2004-2018 Rubicon Communications, LLC (Netgate)
  * All rights reserved.
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -32,6 +31,7 @@ require_once("guiconfig.inc");
 require_once("vpn.inc");
 require_once("wireguard/wireguard.inc");
 
+init_config_arr(array('wireguard'));
 $wgcfg = &$config['wireguard'];
 
 if ($_REQUEST['generatekey']) {
@@ -57,8 +57,11 @@ if ($_POST['save'] ) {
 		$input_errors[] = gettext("Peer Name already exist");
 	};
 	/*Interface exist in wireguard config and global*/
-	if(!ctype_alnum($_GET['interface']) || $_GET['act'] == add && !empty($wgcfg[$_GET['interface']])){
+	if( !preg_match('/^wg[0-9]+$/', $_REQUEST['interface']) ) {
 		$input_errors[] = gettext("A valid Interface is needed.");
+	}
+	if( $_GET['act'] == add && !empty($wgcfg[$_REQUEST['interface']]) ) {
+		$input_errors[] = gettext("Interface name is already in use.");
 	}
 	if ( !is_ipaddr($_POST['local_ip'])) {
 		$input_errors[] = gettext("A valid server address must be specified.");
@@ -174,7 +177,7 @@ if ($_GET['act'] == 'add' || ($_GET['act'] == 'edit' )) {
 			'*Local Interface',
 			'text',
 			$wg_interface['interface']
-	))->setPattern('[a-zA-Z0-9]+')->setHelp('Choose an interface Number');
+	))->setPattern('[wg0-9]+')->setHelp('Choose an interface Number');
 
 	$section->addInput(new Form_Input(
 			'description',
